@@ -1,0 +1,57 @@
+import React, { useState, useEffect } from "react";
+import { Container } from "react-bootstrap";
+import "../../sass/App.scss";
+
+import NavBar from "../NavBar";
+import Inicio from "../Inicio";
+import QuemSomos from "../QuemSomos";
+import Projetos from "../Projetos";
+import Eventos from "../Eventos";
+import CentrosFormadores from "../CentrosFormadores";
+import Login from "../Login";
+
+function Main() {
+  const [active, setActive] = useState("inicio");
+  const [scrollTop, setScrollTop] = useState(0);
+  const height = window.screen.height;
+
+  useEffect(() => {
+    const onScroll = (e) => {
+      setScrollTop(e.target.documentElement.scrollTop);
+    };
+    window.addEventListener("scroll", onScroll);
+
+    return () => window.removeEventListener("scroll", onScroll);
+  }, [scrollTop]);
+
+  useEffect(() => {
+    const section = scrollTop / height + 0.25;
+    if (section < 1) {
+      setActive("inicio");
+    } else if (section > 1 && section < 2) {
+      setActive("quemsomos");
+    } else if (section > 2 && section < 3) {
+      setActive("projetos");
+    } else if (section > 3 && section < 3.8) {
+      setActive("eventos");
+    } else if (section > 3.8 && section < 4.5) {
+      setActive("centrosformadores");
+    } else if (section > 4.5) {
+      setActive("login");
+    }
+  }, [scrollTop]);
+
+  return (
+    <Container fluid className="pl-0 pr-0">
+      <NavBar tab={active} />
+      <Inicio />
+      <QuemSomos />
+      <Projetos />
+      <Eventos />
+      <CentrosFormadores />
+      <Login />
+    </Container>
+  );
+}
+
+export default Main;

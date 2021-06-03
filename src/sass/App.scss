@@ -1,0 +1,261 @@
+@import "~bootstrap/scss/bootstrap";
+$grid-breakpoints: (
+  xl: 1920px
+);
+.navbar-custom {
+  @extend .text-primary, .text-uppercase;
+  border-bottom: 3px solid transparent;
+  border-image: linear-gradient(
+    to right,
+    #8f8fc3 14.39%,
+    rgba(255, 157, 214, 0.65) 100%
+  );
+  border-image-slice: 1;
+  .itens-menu {
+    margin-left: 18px;
+  }
+}
+.sections {
+  @include media-breakpoint-between(md, xl) {
+    height: 100vh;
+  }
+  @include media-breakpoint-down(xs) {
+    padding-bottom: 15px;
+  }
+}
+#inicio {
+  background-image: url("./img/fundo2.png");
+  // background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  .logo {
+    max-width: 300px;
+  }
+  .index-itens {
+    padding-top: 8vh;
+    padding-left: 12vw;
+  }
+  .lista-novidades {
+    max-width: 380px;
+    min-width: 380px;
+    a:link {
+      text-decoration: none;
+    }
+    .list-group-item {
+      text-align: center;
+      .texto-data {
+        font-size: x-large;
+      }
+      .texto-titulo {
+        font-weight: bold;
+        font-size: larger;
+        margin-bottom: 5px;
+        @extend .text-capitalize;
+      }
+      .texto-descri {
+        margin-top: 5px;
+        font-size: medium;
+        max-width: 380px;
+      }
+      color: white;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      background: rgba(143, 143, 195, 0.65);
+    }
+    .list-group-item:hover {
+      // border: 1px solid rgba(0, 0, 0, 0.2);
+      background: rgba(255, 157, 214, 0.65);
+    }
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+  }
+}
+.testesvg {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.sections-titulos {
+  margin-top: 4em;
+  margin-left: 5em;
+  h1 {
+    font-weight: bolder;
+  }
+}
+#quem-somos {
+  @extend .shadow;
+  background-image: linear-gradient(#efe9eb, #ffffff);
+  // background-image: linear-gradient(#fbafaf, #ffffff);
+  .quem-somos-titulo {
+    @include media-breakpoint-between(md, xl) {
+      margin-top: 4em;
+      margin-left: 5em;
+    }
+    @include media-breakpoint-down(xs) {
+      margin-top: 1em;
+      margin-left: 1em;
+    }
+
+    h1 {
+      font-weight: bolder;
+    }
+  }
+  .quem-somos-texto {
+    @extend .justify-content-md-center;
+    @include media-breakpoint-between(md, xl) {
+      margin-top: 12em;
+    }
+    @include media-breakpoint-down(xs) {
+      margin-top: 2em;
+      margin-left: 10px;
+      padding-right: 10px;
+    }
+    font-size: larger;
+    h1 {
+      font-size: 3.5em;
+      text-align: center;
+    }
+  }
+  .coracao {
+    height: 250px;
+    margin-right: 15px;
+  }
+  .somos {
+    background-color: #7b5a42ad;
+    color: #fff;
+  }
+}
+#projetos {
+  background-color: #fff;
+  .projetos-cards {
+    @include media-breakpoint-between(md, xl) {
+      @extend .justify-content-md-center;
+    }
+    @include media-breakpoint-down(xs) {
+      margin-left: 12px;
+    }
+    margin-top: 2em;
+    .card {
+      @extend .border-white;
+      margin-left: 30px;
+      margin-right: 30px;
+      text-align: center;
+
+      img {
+        @extend .shadow;
+        height: 420px;
+        @include media-breakpoint-between(md, lg) {
+          height: 420px;;
+        }
+        @include media-breakpoint-up(xl) {
+          height: 620px;
+        }
+      }
+    }
+  }
+}
+#eventos {
+  background-color: #fff;
+  .eventos-calendar {
+    margin-top: 2em;
+    @include media-breakpoint-between(md, xl) {
+      @extend .justify-content-md-center;
+    }
+    @include media-breakpoint-down(xs) {
+      margin-left: 12px;
+    }
+    .react-calendar {
+      @extend .border-0;
+      @extend .shadow-lg;
+    }
+    .lista-novidades {
+      @include media-breakpoint-down(xs) {
+        margin-top: 2em;
+      }
+    }
+  }
+}
+#centros-formadores {
+  background-color: #fff;
+  .lista-centros-formadores {
+    margin-top: 5em;
+  }
+  .lista-item {
+    @extend .shadow;
+    border: solid 1px;
+    border-color: #d0d0d0;
+    background-color: #f3f3f3;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    .ipessp {
+      margin-top: 55px;
+      margin-left: 15px;
+    }
+    .issec {
+      margin-top: 55px;
+      margin-left: 35px;
+    }
+    .hcm {
+      margin-top: 45px;
+      margin-left: 40px;
+    }
+    .cec_inc_rj {
+      margin-top: 45px;
+      margin-left: 45px;
+    }
+    .incor {
+      margin-top: 45px;
+      margin-left: 18px;
+    }
+    .dantepp {
+      max-width: 148px;
+      margin-top: 45px;
+    }
+    .unicamp {
+      margin-top: 45px;
+      margin-left: 50px;
+    }
+    .unifesp {
+      margin-top: 45px;
+      margin-left: 25px;
+    }
+  }
+  .lista-item:hover {
+    height: 155px;
+    width: 155px;
+  }
+}
+#login {
+  background-color: rgba(239, 239, 239, 0.56);
+  .texto {
+    &.topo {
+      padding-top: 15em;
+      padding-bottom: 4em;
+    }
+    @include media-breakpoint-between(md, xl) {
+      @extend .justify-content-md-center;
+    }
+    @include media-breakpoint-down(xs) {
+      margin-left: 12px;
+    }
+  }
+  .logar {
+    background-color: #2e6c80;
+    font-weight: 700;
+  }
+}
+
+.card-columns {
+  .card:hover {
+    transform: translate(-5px, -5px);
+    cursor: pointer;
+  }
+  padding: 30px;
+  @include media-breakpoint-only(lg) {
+    column-count: 3;
+  }
+  @include media-breakpoint-only(xl) {
+    column-count: 5;
+  }
+}
