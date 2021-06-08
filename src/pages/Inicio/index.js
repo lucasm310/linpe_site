@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 
 import { ReactComponent as EfeitoSVG } from "../../assets/efeito_secaoinicio.svg";
 import { ReactComponent as Instagram } from "../../assets/Instagram.svg";
-import { ReactComponent as Facebook } from "../../assets/facebook.svg";
 import { ReactComponent as Youtube } from "../../assets/youtube.svg";
 import { ReactComponent as Telegram } from "../../assets/telegram.svg";
 import logo from "../../assets/logo.png";
@@ -29,7 +28,6 @@ function Inicio() {
             </Row>
             <Row className="justify-content-around">
               <Instagram />
-              <Facebook />
               <Youtube />
               <Telegram />
             </Row>
