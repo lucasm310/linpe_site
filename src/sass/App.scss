@@ -51,7 +51,6 @@ $grid-breakpoints: (
         font-weight: bold;
         font-size: larger;
         margin-bottom: 5px;
-        @extend .text-capitalize;
       }
       .texto-descri {
         margin-top: 5px;

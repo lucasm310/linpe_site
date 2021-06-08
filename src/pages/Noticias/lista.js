@@ -22,7 +22,7 @@ function ListaNoticias() {
       {noticias.map((noticia) => (
         <Card key={noticia.noticiaID} className="text-center" onClick={(event) => {handlerClick(event, noticia.noticiaID)}}>
           <Card.Body>
-            <Card.Title className="text-capitalize">{noticia.titulo}</Card.Title>
+            <Card.Title>{noticia.titulo}</Card.Title>
             <Card.Text>{noticia.resumo}</Card.Text>
             <Card.Text>
               <small className="text-muted">{noticia.data_cadastro.toLocaleString()}</small>

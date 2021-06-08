@@ -17,7 +17,7 @@ function Noticia() {
     <Container fluid className="pl-0 pr-0">
       <NavBar tab="noticias"/>
       <div>
-        <h2 className="mt-3 mb-5 text-capitalize text-center font-weight-bold">{noticia.titulo}</h2>
+        <h2 className="mt-3 mb-5 text-center font-weight-bold">{noticia.titulo}</h2>
         <div className="m-5" dangerouslySetInnerHTML={{ __html: noticia.conteudo}} />
       </div>
     </Container>
