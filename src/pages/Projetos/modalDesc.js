@@ -1,9 +1,18 @@
-import React from "react";
-
-import { Modal, Button } from "react-bootstrap";
+import React, { useEffect, useState } from "react";
+import { Modal, Button, ListGroup, Col, Row } from "react-bootstrap";
+import { getDocumentos, getConteudo } from "./services";
 
 function Descomplicando(props) {
+  const [documents, setDocumentos] = useState([]);
   const { onClose, open } = props;
+  const handlerDownload = (id) => {
+    getConteudo(id);
+  };
+  useEffect(() => {
+    if (open) {
+      getDocumentos(setDocumentos);
+    }
+  }, [open]);
   return (
     <Modal
       show={open}
@@ -13,11 +22,32 @@ function Descomplicando(props) {
       centered
     >
       <Modal.Header closeButton>
-        <Modal.Title id="modal_Descomplicando">Descomplicando</Modal.Title>
+        <Modal.Title id="modal_Descomplicando">Descomplicando a Perfusão</Modal.Title>
       </Modal.Header>
-      <Modal.Body></Modal.Body>
+      <Modal.Body>
+        <ListGroup variant="flush">
+          {documents.map((document, idx) => (
+            <ListGroup.Item key={idx}>
+              <div className="d-flex">
+                <div className="p-2">{document.nome}</div>
+                <div className="ml-auto p-2">
+                  <Button
+                    onClick={() => {
+                      handlerDownload(document.documentoID);
+                    }}
+                  >
+                    Baixar
+                  </Button>
+                </div>
+              </div>
+            </ListGroup.Item>
+          ))}
+        </ListGroup>
+      </Modal.Body>
       <Modal.Footer>
-        <Button onClick={onClose}>Fechar</Button>
+        <Button variant="primary" onClick={onClose}>
+          Fechar
+        </Button>
       </Modal.Footer>
     </Modal>
   );
