@@ -1,6 +1,6 @@
 @import "~bootstrap/scss/bootstrap";
 $grid-breakpoints: (
-  xl: 1920px
+  xl: 1920px,
 );
 .navbar-custom {
   @extend .text-primary, .text-uppercase;
@@ -144,11 +144,14 @@ $grid-breakpoints: (
         @extend .shadow;
         height: 420px;
         @include media-breakpoint-between(md, lg) {
-          height: 420px;;
+          height: 420px;
         }
         @include media-breakpoint-up(xl) {
           height: 620px;
         }
+      }
+      img:hover {
+        cursor: pointer;
       }
     }
   }
@@ -257,4 +260,9 @@ $grid-breakpoints: (
   @include media-breakpoint-only(xl) {
     column-count: 5;
   }
+}
+
+.click:hover {
+  transform: translate(-5px, -5px);
+  cursor: pointer;
 }
