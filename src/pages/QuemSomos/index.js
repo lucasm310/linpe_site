@@ -15,15 +15,18 @@ function QuemSomos() {
         <Col md={8} xs={12} className="quem-somos-texto">
           <span>
             <p>
-              A Liga Nacional de Perfusão (LINPE) é uma entidade autônoma, sem
-              fins lucrativos ligada a parte Científica da Sociedade Brasileira
-              de Circulação Extracorpórea (SBCEC), com o dever de propagar a
-              Perfusão Extracorpórea pelo Brasil no meio acadêmico.
+              A Liga Nacional de Perfusão foi fundada em janeiro de 2020 por
+              estudantes que buscavam aprofundar seus conhecimentos na área da
+              Perfusão. Desde então a LINPE tem proporcionado aos seus membros
+              oportunidades de atividades didáticas, cientificas, culturais e
+              sociais.
             </p>
             <p>
-              Fundada por amantes de Perfusão, e conta com uma Diretoria formada
-              por Graduandos e Graduados dos cursos da saúde em que permite ser
-              Perfusionista.
+              Administrada pelos próprios estudantes, mas com orientação
+              docente, tem sua atuação segundo o tripé da formação universitária
+              ensino, pesquisa e extensão. Nossa missão é ajudar na divulgação e
+              valorização da perfusão pelo Brasil, baseados na ética
+              profissional e qualidade de informação.
             </p>
           </span>
         </Col>

@@ -15,6 +15,7 @@ function Inicio() {
   useEffect(() => {
     getNoticas(SetNoticias);
   }, []);
+  
   return (
     <section id="inicio" className="sections">
       <Col>
@@ -27,9 +28,33 @@ function Inicio() {
               <h2 className="titulo mx-auto">LIGA NACIONAL DE PERFUSÃO</h2>
             </Row>
             <Row className="justify-content-around">
-              <Instagram />
-              <Youtube />
-              <Telegram />
+              <Instagram
+                className="click"
+                onClick={() =>
+                  window.open(
+                    "https://www.instagram.com/linpe.perfusao/",
+                    "_blank"
+                  )
+                }
+              />
+              <Youtube
+                className="click"
+                onClick={() =>
+                  window.open(
+                    "https://youtube.com/channel/UCkxJDzYjrudNQKruzW3gtMw",
+                    "_blank"
+                  )
+                }
+              />
+              <Telegram
+                className="click"
+                onClick={() =>
+                  window.open(
+                    "https://t.me/joinchat/mzJtlB6_jOU5MjFh",
+                    "_blank"
+                  )
+                }
+              />
             </Row>
           </Col>
           <Col md={6} xs={12} className="index-itens">
