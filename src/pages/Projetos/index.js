@@ -20,12 +20,12 @@ function Projetos() {
 
   return (
     <section id="projetos" className="sections">
-      <Row>
+      <Row className="no-gutters">
         <Col className="sections-titulos">
           <h1>PROJETOS</h1>
         </Col>
       </Row>
-      <Row className="projetos-cards">
+      <Row className="projetos-cards no-gutters">
         <Col md={10}>
           <CardDeck>
             <Card>

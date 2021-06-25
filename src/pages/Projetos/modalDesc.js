@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Modal, Button, ListGroup, Col, Row } from "react-bootstrap";
+import { Modal, Button, ListGroup } from "react-bootstrap";
 import { getDocumentos, getConteudo } from "./services";
 
 function Descomplicando(props) {
@@ -22,7 +22,9 @@ function Descomplicando(props) {
       centered
     >
       <Modal.Header closeButton>
-        <Modal.Title id="modal_Descomplicando">Descomplicando a Perfusão</Modal.Title>
+        <Modal.Title id="modal_Descomplicando">
+          Descomplicando a Perfusão
+        </Modal.Title>
       </Modal.Header>
       <Modal.Body>
         <ListGroup variant="flush">

@@ -55,12 +55,12 @@ const centros = [
 function CentrosFormadores() {
   return (
     <section id="centros-formadores" className="sections">
-      <Row>
+      <Row className="no-gutters">
         <Col className="sections-titulos">
           <h1>CENTROS FORMADORES</h1>
         </Col>
       </Row>
-      <Row className="lista-centros-formadores">
+      <Row className="lista-centros-formadores no-gutters">
         {centros.map((centro, idx) => (
           <Col key={idx} md={3} className="d-flex justify-content-center mb-5">
             <div className="lista-item">

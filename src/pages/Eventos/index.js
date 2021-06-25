@@ -51,12 +51,12 @@ function Eventos() {
 
   return (
     <section id="eventos" className="sections">
-      <Row>
+      <Row className="no-gutters">
         <Col className="sections-titulos">
           <h1>EVENTOS</h1>
         </Col>
       </Row>
-      <Row className="eventos-calendar">
+      <Row className="eventos-calendar no-gutters">
         <Col md={5} xs={12}>
           <FullCalendar
             height={500}

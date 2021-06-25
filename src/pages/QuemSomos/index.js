@@ -5,7 +5,7 @@ import coracao from "../../assets/coracao.png";
 function QuemSomos() {
   return (
     <section id="quem-somos" className="sections">
-      <Row>
+      <Row className="no-gutters">
         <Col md={4} xs={12} className="quem-somos-texto">
           <h1 className="font-weight-lighter">QUEM </h1>
           <h1 className="font-weight-bolder">

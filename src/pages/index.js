@@ -1,13 +1,8 @@
-import React from 'react';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
-import Main from './Main'
-import Noticias from './Noticias'
-import Noticia from './Noticias/noticia'
+import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Main from "./Main";
+import Noticias from "./Noticias";
+import Noticia from "./Noticias/noticia";
 
 function App() {
   return (

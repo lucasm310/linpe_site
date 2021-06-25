@@ -19,11 +19,12 @@ $grid-breakpoints: (
   }
 }
 .sections {
-  @include media-breakpoint-between(md, xl) {
+  @media (min-width: 768px) {
     height: 100vh;
   }
-  @include media-breakpoint-down(xs) {
+  @media (max-width: 575.98px) {
     padding-bottom: 15px;
+    height: auto;
   }
 }
 #inicio {
