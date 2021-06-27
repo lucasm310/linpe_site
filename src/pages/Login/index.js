@@ -15,8 +15,11 @@ function Login() {
       <Row className="texto topo no-gutters">
         <Col md={8} xs={12}>
           <h4>
-            Cadastre em nossa plataforma para ter acesso a conteúdos exclusivos!
+            Ao realizar seu cadastro você terá vantagens como: acesso a
+            conteúdos exclusivos da LINPE, aulas, resumos, informações
+            privilegiada, eventos.
           </h4>
+          <h4>Venha fazer parte da LINPE e cresça conosco.</h4>
         </Col>
       </Row>
       <Row className="texto no-gutters">

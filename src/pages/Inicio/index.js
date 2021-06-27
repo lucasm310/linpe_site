@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Col, Row, Image, ListGroup } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import ReactGA from 'react-ga';
 
 import { ReactComponent as EfeitoSVG } from "../../assets/efeito_secaoinicio.svg";
 import { ReactComponent as Instagram } from "../../assets/Instagram.svg";
@@ -14,6 +15,7 @@ function Inicio() {
 
   useEffect(() => {
     getNoticas(SetNoticias);
+    ReactGA.pageview(window.location.pathname + window.location.search);
   }, []);
 
   return (

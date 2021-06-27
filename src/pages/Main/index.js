@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Container } from "react-bootstrap";
+import { useHistory } from "react-router-dom";
+import ReactGA from "react-ga";
 import "../../sass/App.scss";
 
 import NavBar from "../NavBar";
@@ -14,6 +16,7 @@ function Main() {
   const [active, setActive] = useState("inicio");
   const [scrollTop, setScrollTop] = useState(0);
   const height = window.screen.height;
+  const history = useHistory();
 
   useEffect(() => {
     const onScroll = (e) => {
@@ -23,6 +26,14 @@ function Main() {
 
     return () => window.removeEventListener("scroll", onScroll);
   }, [scrollTop]);
+
+  useEffect(() => {
+    return history.listen((location) => {
+      let pageName = `${location.pathname}${location.hash}`;
+      ReactGA.set({ page: pageName });
+      ReactGA.pageview(pageName);
+    });
+  }, [history]);
 
   useEffect(() => {
     const section = scrollTop / height + 0.25;
