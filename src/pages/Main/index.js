@@ -39,15 +39,15 @@ function Main() {
     const section = scrollTop / height + 0.25;
     if (section < 1) {
       setActive("inicio");
-    } else if (section > 1 && section < 2) {
+    } else if (section > 1 && section < 1.9) {
       setActive("quemsomos");
-    } else if (section > 2 && section < 3) {
+    } else if (section > 1.9 && section < 2.7) {
       setActive("projetos");
-    } else if (section > 3 && section < 3.8) {
+    } else if (section > 2.7 && section < 3.5) {
       setActive("eventos");
-    } else if (section > 3.8 && section < 4.5) {
+    } else if (section > 3.5 && section < 4.3) {
       setActive("centrosformadores");
-    } else if (section > 4.5) {
+    } else if (section > 4.3) {
       setActive("login");
     }
   }, [scrollTop]);
