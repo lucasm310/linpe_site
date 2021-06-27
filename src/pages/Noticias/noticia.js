@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Container } from "react-bootstrap";
+import ReactGA from "react-ga";
 import "../../sass/App.scss";
 import NavBar from "../NavBar";
 import { getNotica } from "./services";
