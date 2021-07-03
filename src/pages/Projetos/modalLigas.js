@@ -6,6 +6,8 @@ import logo_lamce from "../../assets/lamce.jpg";
 import logo_unefan from "../../assets/lapex_unefan.jpg";
 import logo_liapex from "../../assets/liapex.jpg";
 import logo_unicid from "../../assets/unicid.jpg";
+import logo_lacce from "../../assets/lacce.png";
+
 
 const ligas_info = [
   {
@@ -43,6 +45,12 @@ const ligas_info = [
     org: "UFPI",
     logo: logo_lamce,
     url: "https://www.instagram.com/lamceufpi/",
+  },
+  {
+    name: "LACCE",
+    org: "UNIFESP",
+    logo: logo_lacce,
+    url: "https://www.instagram.com/lacce.unifesp/",
   },
 ];
 
