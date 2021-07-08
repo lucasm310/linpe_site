@@ -65,15 +65,7 @@ function Inicio() {
                 href={`/noticia/${noticia.noticiaID}`}
               >
                 <Row className="align-items-center">
-                  <Col md={3}>
-                    <span className="texto-data">
-                      {noticia.data_cadastro.getDate()}{" "}
-                      {noticia.data_cadastro
-                        .toLocaleString("default", { month: "short" })
-                        .toUpperCase()}
-                    </span>
-                  </Col>
-                  <Col md={9}>
+                  <Col md={12}>
                     <span className="texto-titulo mb-5">{noticia.titulo}</span>
                     <br />
                     <span className="texto-descri text-justify">
