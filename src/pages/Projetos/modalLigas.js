@@ -6,7 +6,7 @@ import logo_lamce from "../../assets/lamce.jpg";
 import logo_unefan from "../../assets/lapex_unefan.jpg";
 import logo_liapex from "../../assets/liapex.jpg";
 import logo_unicid from "../../assets/unicid.jpg";
-import logo_lacce from "../../assets/lacce.png";
+import logo_lacce from "../../assets/lacce.jpg";
 
 
 const ligas_info = [
