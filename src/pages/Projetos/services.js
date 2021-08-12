@@ -16,6 +16,16 @@ export const getDocumentos = (setDocumentos) => {
     });
 };
 
+export const getDocumentoUrl = async (id) => {
+  return api.get(`/documentos/${id}`, {})
+    .then((result) => {
+      return result.data.resultados[0].url.url;
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+};
+
 export const getConteudo = (id) => {
   api
     .get(`/documentos/${id}`, {})
