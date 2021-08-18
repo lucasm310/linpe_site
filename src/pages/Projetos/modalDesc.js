@@ -28,22 +28,29 @@ function Descomplicando(props) {
       </Modal.Header>
       <Modal.Body>
         <ListGroup variant="flush">
-          {documents.map((document, idx) => (
-            <ListGroup.Item key={idx}>
-              <div className="d-flex">
-                <div className="p-2">{document.nome}</div>
-                <div className="ml-auto p-2">
-                  <Button
-                    onClick={() => {
-                      handlerDownload(document.documentoID);
-                    }}
-                  >
-                    Baixar
-                  </Button>
+          {documents
+            .filter((doc) => doc.categoria !== "mapa_mental")
+            .map((document, idx) => (
+              <ListGroup.Item key={idx}>
+                <div className="d-flex">
+                  <div className="p-2">{document.nome}</div>
+                  <div className="ml-auto p-2">
+                    <span class="badge badge-success text-capitalize">
+                      {document.categoria}
+                    </span>
+                  </div>
+                  <div className="ml-auto p-2">
+                    <Button
+                      onClick={() => {
+                        handlerDownload(document.documentoID);
+                      }}
+                    >
+                      Baixar
+                    </Button>
+                  </div>
                 </div>
-              </div>
-            </ListGroup.Item>
-          ))}
+              </ListGroup.Item>
+            ))}
         </ListGroup>
       </Modal.Body>
       <Modal.Footer>

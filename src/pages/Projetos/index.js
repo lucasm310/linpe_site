@@ -3,12 +3,16 @@ import { Row, Col, CardDeck, Card } from "react-bootstrap";
 import revista from "../../assets/revista.jpeg";
 import ligas from "../../assets/ligas.jpeg";
 import descomplicando from "../../assets/descomplicando.jpeg";
+import mapasMentais from "../../assets/mapasMentais.jpeg";
 import Ligas from "./modalLigas";
 import Descomplicando from "./modalDesc";
+import Mapas from "./modalMapas";
+
 
 function Projetos() {
   const [showModalLigas, setShowModalLigas] = useState(false);
   const [showModalDesc, setShowModalDesc] = useState(false);
+  const [showModalMapa, setShowModalMapa] = useState(false);
 
   const closeModalLigas = () => {
     setShowModalLigas(false);
@@ -16,6 +20,10 @@ function Projetos() {
 
   const closeModalDescomplicando = () => {
     setShowModalDesc(false);
+  };
+
+  const closeModalMapas = () => {
+    setShowModalMapa(false);
   };
 
   return (
@@ -26,7 +34,7 @@ function Projetos() {
         </Col>
       </Row>
       <Row className="projetos-cards no-gutters">
-        <Col md={10}>
+        <Col md={11}>
           <CardDeck>
             <Card>
               <Card.Body>
@@ -35,6 +43,14 @@ function Projetos() {
                 </Card.Title>
               </Card.Body>
               <Card.Img variant="bottom" src={revista} />
+            </Card>
+            <Card onClick={() => setShowModalMapa(true)}>
+              <Card.Body>
+                <Card.Title className="font-weight-bolder">
+                  Mapas Mentais
+                </Card.Title>
+              </Card.Body>
+              <Card.Img variant="bottom" src={mapasMentais} />
             </Card>
             <Card onClick={() => setShowModalDesc(true)}>
               <Card.Body>
@@ -57,6 +73,7 @@ function Projetos() {
       </Row>
       <Ligas onClose={closeModalLigas} open={showModalLigas} />
       <Descomplicando onClose={closeModalDescomplicando} open={showModalDesc} />
+      <Mapas onClose={closeModalMapas} open={showModalMapa}/>
     </section>
   );
 }
