@@ -3,6 +3,7 @@ import { Row, Col, CardDeck, Card } from "react-bootstrap";
 import revista from "../../assets/revista.jpeg";
 import ligas from "../../assets/ligas.jpeg";
 import descomplicando from "../../assets/descomplicando.jpeg";
+import mapasMentais from "../../assets/mapasMentais.jpeg";
 import Ligas from "./modalLigas";
 import Descomplicando from "./modalDesc";
 import Mapas from "./modalMapas";
@@ -49,7 +50,7 @@ function Projetos() {
                   Mapas Mentais
                 </Card.Title>
               </Card.Body>
-              <Card.Img variant="bottom" src={descomplicando} />
+              <Card.Img variant="bottom" src={mapasMentais} />
             </Card>
             <Card onClick={() => setShowModalDesc(true)}>
               <Card.Body>
