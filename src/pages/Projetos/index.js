@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { Row, Col, CardDeck, Card } from "react-bootstrap";
 import revista from "../../assets/revista.jpeg";
+import theLinpe from "../../assets/the_linpe.jpeg";
 import ligas from "../../assets/ligas.jpeg";
 import descomplicando from "../../assets/descomplicando.jpeg";
 import mapasMentais from "../../assets/mapasMentais.jpeg";
 import Ligas from "./modalLigas";
 import Descomplicando from "./modalDesc";
 import Mapas from "./modalMapas";
-
 
 function Projetos() {
   const [showModalLigas, setShowModalLigas] = useState(false);
@@ -39,10 +39,10 @@ function Projetos() {
             <Card>
               <Card.Body>
                 <Card.Title className="font-weight-bolder">
-                  Revista LINPE
+                  The Linpe
                 </Card.Title>
               </Card.Body>
-              <Card.Img variant="bottom" src={revista} />
+              <Card.Img variant="bottom" src={theLinpe} />
             </Card>
             <Card onClick={() => setShowModalMapa(true)}>
               <Card.Body>
@@ -73,7 +73,7 @@ function Projetos() {
       </Row>
       <Ligas onClose={closeModalLigas} open={showModalLigas} />
       <Descomplicando onClose={closeModalDescomplicando} open={showModalDesc} />
-      <Mapas onClose={closeModalMapas} open={showModalMapa}/>
+      <Mapas onClose={closeModalMapas} open={showModalMapa} />
     </section>
   );
 }

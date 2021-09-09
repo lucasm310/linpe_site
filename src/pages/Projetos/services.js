@@ -19,7 +19,7 @@ export const getDocumentos = (setDocumentos) => {
 export const getDocumentoUrl = async (id) => {
   return api.get(`/documentos/${id}`, {})
     .then((result) => {
-      return result.data.resultados[0].url.url;
+      return result.data.resultados[0].url;
     })
     .catch((error) => {
       console.log(error);
@@ -31,7 +31,7 @@ export const getConteudo = (id) => {
     .get(`/documentos/${id}`, {})
     .then((result) => {
       var link = document.createElement("a");
-      link.href = result.data.resultados[0].url.url;
+      link.href = result.data.resultados[0].url;
       link.download = result.data.resultados[0].nome_file;
       document.body.appendChild(link);
       link.click();

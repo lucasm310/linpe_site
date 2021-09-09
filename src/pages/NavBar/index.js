@@ -57,7 +57,7 @@ function NavBar(props) {
           >
             Centros Formadores
           </Nav.Link>
-          <Nav.Link className="itens-menu" href="#login" active={tabs.login}>
+          <Nav.Link className="itens-menu" href="/#login" active={tabs.login}>
             Login
           </Nav.Link>
           <Nav.Link
