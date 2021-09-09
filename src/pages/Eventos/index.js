@@ -95,7 +95,8 @@ function Eventos() {
                     <span className="texto-titulo mb-5">{evento.nome}</span>
                     <br />
                     <span className="texto-descri text-justify">
-                      {evento.descricao.slice(0, 100)}
+                      {evento.descricao !== null &&
+                        evento.descricao.slice(0, 100)}
                     </span>
                   </Col>
                 </Row>
